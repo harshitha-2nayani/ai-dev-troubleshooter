@@ -1,0 +1,154 @@
+LangChain Developer Troubleshooting Documentation
+
+==================================================
+1. ModuleNotFoundError
+==================================================
+
+A ModuleNotFoundError occurs when Python cannot find the module or package being imported.
+
+If a LangChain application produces a ModuleNotFoundError for a package, first check whether the required package is installed in the active Python environment.
+
+If the package is installed in a different virtual environment, the current application may still produce a ModuleNotFoundError.
+
+To troubleshoot the problem, identify the exact missing module name and verify that the package is installed in the environment currently being used by the application.
+
+
+==================================================
+2. ImportError
+==================================================
+
+An ImportError occurs when Python cannot import a required module, class, or function.
+
+When troubleshooting an ImportError, first identify the exact import statement that failed.
+
+Then check whether the required package or component exists in the current environment.
+
+Also verify that the imported class or function is available in the installed version of the package.
+
+
+==================================================
+3. Virtual Environment Problems
+==================================================
+
+Python projects commonly use virtual environments to keep dependencies isolated.
+
+If a package appears to be installed but Python still reports that it cannot find the package, verify that the application and the package installation are using the same virtual environment.
+
+The active virtual environment should be checked before troubleshooting package installation problems.
+
+
+==================================================
+4. FAISS Vector Store
+==================================================
+
+FAISS is used for efficient similarity search over vector embeddings.
+
+A RAG application can store document embeddings in FAISS and use similarity search to retrieve documents that are semantically similar to a user's question.
+
+If FAISS retrieval produces poor results, check the quality of the document chunks, embeddings, and search configuration.
+
+
+==================================================
+5. Embeddings
+==================================================
+
+Embeddings are numerical representations of text.
+
+Texts with similar meanings can have similar vector representations.
+
+An embedding model converts text into vectors that can be stored in a vector store.
+
+If retrieval quality is poor, check whether the embedding model is appropriate for the type of data and queries used by the application.
+
+
+==================================================
+6. Retriever Problems
+==================================================
+
+A retriever finds potentially relevant documents for a user's query.
+
+If a retriever returns irrelevant documents, check the chunking strategy, embedding model, similarity search configuration, and query.
+
+Top-K controls how many documents or chunks are retrieved.
+
+A very low Top-K value may cause important information to be missed.
+
+A very high Top-K value may introduce unnecessary or irrelevant context.
+
+
+==================================================
+7. Reranking
+==================================================
+
+A reranker reorders retrieved documents based on their relevance to the user's query.
+
+A typical retrieval process can first retrieve several candidate documents and then use a reranker to prioritize the most relevant results.
+
+Reranking can improve retrieval quality when the initial vector or keyword search returns several potentially relevant documents.
+
+
+==================================================
+8. Hybrid Search
+==================================================
+
+Hybrid search combines keyword-based search with semantic vector search.
+
+Keyword search is useful for exact terms such as error names, package names, class names, and IDs.
+
+Vector search is useful for understanding semantic meaning.
+
+Combining both approaches can improve retrieval for technical troubleshooting questions.
+
+
+==================================================
+9. RAG Pipeline
+==================================================
+
+RAG stands for Retrieval-Augmented Generation.
+
+A typical RAG application follows this flow:
+
+Documents → Text Splitting → Embeddings → Vector Store → Retriever → LLM → Answer.
+
+The retriever provides relevant external information to the language model.
+
+The LLM should generate an answer based on the retrieved information.
+
+
+==================================================
+10. Poor RAG Retrieval
+==================================================
+
+If the correct information exists in the knowledge base but the system retrieves irrelevant information, the problem may be related to retrieval.
+
+Possible causes include poor chunking, weak embeddings, an unsuitable retrieval strategy, incorrect Top-K settings, or a poorly written query.
+
+Query rewriting can transform a vague user question into a clearer search query.
+
+Metadata filtering can restrict retrieval to documents matching properties such as topic, version, date, or document type.
+
+
+==================================================
+11. Hallucinations and Grounding
+==================================================
+
+A hallucination occurs when an LLM generates information that is not supported by the retrieved context.
+
+Grounding means keeping the generated answer connected to the information retrieved from the knowledge base.
+
+A RAG system should avoid inventing information that is not present in the retrieved documentation.
+
+
+==================================================
+12. Troubleshooting Process
+==================================================
+
+When troubleshooting a developer error:
+
+1. Identify the exact error message.
+2. Identify the package or component involved.
+3. Check the relevant documentation.
+4. Verify the current Python environment.
+5. Check whether the required dependency is installed.
+6. Inspect the retrieval results if the application uses RAG.
+7. Verify that the final answer is supported by the retrieved context.

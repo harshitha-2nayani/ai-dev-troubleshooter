@@ -1,0 +1,43 @@
+Python Error Troubleshooting Documentation
+
+==================================================
+ModuleNotFoundError
+==================================================
+
+ModuleNotFoundError means Python cannot find the module that the program is trying to import.
+
+Check whether the required package is installed.
+
+Make sure the package is installed in the same virtual environment that is being used to run the application.
+
+==================================================
+ImportError
+==================================================
+
+ImportError occurs when Python cannot import a required module, class, or function.
+
+Check the import statement and verify that the required component exists in the installed package version.
+
+==================================================
+AttributeError
+==================================================
+
+AttributeError occurs when an object does not have the attribute or method that the code is trying to access.
+
+Check the object type and verify that the attribute or method name is correct.
+
+==================================================
+TypeError
+==================================================
+
+TypeError occurs when an operation or function receives a value of an inappropriate type.
+
+Check the types of the values being passed to the function or operation.
+
+==================================================
+KeyError
+==================================================
+
+KeyError commonly occurs when code tries to access a dictionary key that does not exist.
+
+Check whether the requested key exists before accessing it.
