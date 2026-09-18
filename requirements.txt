@@ -7,3 +7,4 @@ faiss-cpu
 transformers==5.17.0
 torch==2.14.0
 rank-bm25
+streamlit==1.64.0
