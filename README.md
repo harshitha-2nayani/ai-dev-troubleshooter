@@ -12,24 +12,24 @@ This project helps developers troubleshoot Python and LangChain-related issues u
 
 The system:
 
-* Loads technical documentation
-* Splits documents into smaller chunks
-* Converts chunks into embeddings
-* Stores embeddings in FAISS
-* Performs semantic vector search
-* Performs BM25 keyword search
-* Combines vector and keyword retrieval
-* Rewrites user queries
-* Reranks retrieved documents
-* Filters irrelevant context
-* Compresses retrieved context
-* Maintains conversation history
-* Handles follow-up questions
-* Checks retrieval confidence
-* Performs recovery searches when retrieval is weak
-* Prevents answers for unknown errors
-* Generates answers grounded in the documentation
-* Displays the sources used
+- Loads technical documentation
+- Splits documents into smaller chunks
+- Converts chunks into embeddings
+- Stores embeddings in FAISS
+- Performs semantic vector search
+- Performs BM25 keyword search
+- Combines vector and keyword retrieval
+- Rewrites user queries
+- Reranks retrieved documents
+- Filters irrelevant context
+- Compresses retrieved context
+- Maintains conversation history
+- Handles follow-up questions
+- Checks retrieval confidence
+- Performs recovery searches when retrieval is weak
+- Prevents answers for unknown errors
+- Generates answers grounded in the documentation
+- Displays the sources used
 
 ## 🧠 Architecture
 
@@ -277,38 +277,38 @@ data/
 
 The documentation covers topics such as:
 
-* ModuleNotFoundError
-* ImportError
-* AttributeError
-* TypeError
-* Python packages
-* Virtual environments
-* FAISS
-* RAG
-* Retrieval
-* Reranking
-* Query rewriting
-* Metadata filtering
-* Grounding
-* Troubleshooting practices
+- ModuleNotFoundError
+- ImportError
+- AttributeError
+- TypeError
+- Python packages
+- Virtual environments
+- FAISS
+- RAG
+- Retrieval
+- Reranking
+- Query rewriting
+- Metadata filtering
+- Grounding
+- Troubleshooting practices
 
 ## 🛠️ Technologies Used
 
-* Python
-* LangChain
-* LangChain Text Splitters
-* Hugging Face Embeddings
-* Sentence Transformers
-* FAISS
-* BM25
-* Cross-Encoder
-* FLAN-T5
-* RAG
-* Hybrid Search
-* Query Rewriting
-* Reranking
-* Context Compression
-* Agent Workflow
+- Python
+- LangChain
+- LangChain Text Splitters
+- Hugging Face Embeddings
+- Sentence Transformers
+- FAISS
+- BM25
+- Cross-Encoder
+- FLAN-T5
+- RAG
+- Hybrid Search
+- Query Rewriting
+- Reranking
+- Context Compression
+- Agent Workflow
 
 ## 📁 Project Structure
 
