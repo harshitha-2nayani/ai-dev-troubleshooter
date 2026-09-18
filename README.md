@@ -2,6 +2,10 @@
 
 An AI-powered developer assistant that uses Retrieval-Augmented Generation (RAG) and an agent-style workflow to answer technical troubleshooting questions from a trusted documentation knowledge base.
 
+🚀 **Live Demo:** https://ai-dev-troubleshooter-dzbohlx8eypwicz63p9grc.streamlit.app
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-dev-troubleshooter-dzbohlx8eypwicz63p9grc.streamlit.app)
+
 ## 🚀 Project Overview
 
 This project helps developers troubleshoot Python and LangChain-related issues using relevant documentation instead of relying only on the language model's general knowledge.
